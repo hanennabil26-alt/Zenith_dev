@@ -26,7 +26,9 @@ export class LeadershipComponent {
   setIndex(i: number) { this.currentIndex = i; }
 
   get trackTransform(): string {
-    const base = this.currentIndex * 427;
+    const isMobile = window.innerWidth <= 768;
+    const itemWidth = isMobile ? window.innerWidth : 427;
+    const base = this.currentIndex * itemWidth;
     return `translateX(calc(-${base}px + ${this.dragOffset}px))`;
   }
 

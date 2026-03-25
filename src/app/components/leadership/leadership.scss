@@ -183,9 +183,16 @@
       font-size: 32px;
     }
   }
+  .team-carousel {
+    width: 100%;
+  }
+  .team-track {
+    width: 100%;
+  }
   .team-member {
-    flex: 0 0 calc(100vw - 40px);
-    padding-bottom: 40px;
+    flex: 0 0 100vw;
+    padding: 0 20px 40px;
+    align-items: center;
   }
   .member-photo {
     width: 180px;
