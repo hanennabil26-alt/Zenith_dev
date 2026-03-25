@@ -58,4 +58,13 @@ export class ProjectsComponent {
   onTouchMove(e: TouchEvent) {
     e.preventDefault();
   }
+
+  onTouchEnd(e: TouchEvent) {
+    const diff = this.dragStartX - e.changedTouches[0].clientX;
+    if (diff > this.dragThreshold && this.currentIndex < this.projects.length - 1) {
+      this.currentIndex++;
+    } else if (diff < -this.dragThreshold && this.currentIndex > 0) {
+      this.currentIndex--;
+    }
+  }
 }
