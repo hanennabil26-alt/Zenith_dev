@@ -31,11 +31,14 @@ export class ProjectsComponent {
   }
 
   get cardWidth(): number {
-    return window.innerWidth <= 768 ? window.innerWidth - 40 : 472;
+    if (this.isMobile) return window.innerWidth - 40;
+    const containerWidth = Math.min(window.innerWidth - 520, 1400 - 48);
+    return (containerWidth - 32) / 3;
   }
 
   get trackTransform(): string {
-    return `translateX(-${this.currentIndex * (this.cardWidth + (window.innerWidth <= 768 ? 20 : 48))}px)`;
+    if (this.isMobile) return 'none';
+    return `translateX(-${this.currentIndex * (this.cardWidth + 16)}px)`;
   }
 
   setIndex(i: number) { this.currentIndex = i; }
