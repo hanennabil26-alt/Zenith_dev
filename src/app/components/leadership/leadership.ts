@@ -14,8 +14,9 @@ export class LeadershipComponent {
     { name: 'Eng. Abdallah Mahmoud', role: 'CEO' },
     { name: 'Mr. Mahmoud Said', role: 'CO-FOUNDER' },
     { name: 'Eng. Ahmed Elseady', role: 'COO' },
-    { name: 'Youssef Ali', role: 'Financial Controller' },
-    { name: 'Nadia Reda', role: 'Project Lead' },
+    { name: 'Sameh Shamakh', role: 'CFO' },
+    { name: 'Mahmoud El-Nasharty', role: 'Sales Manager' },
+    { name: 'Kareem Saadawy', role: 'Accountant' },
     { name: 'Khaled Hassan', role: 'Construction Manager' },
     { name: 'Mona Fahmy', role: 'Marketing Strategy' },
   ];
