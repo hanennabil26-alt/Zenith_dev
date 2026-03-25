@@ -1,0 +1,23 @@
+<section class="coverage">
+  <div class="coverage-container">
+    <div class="coverage-info">
+      <p class="section-label">COVERAGE</p>
+      <h2>Strategic Presence<br/>Across Egypt</h2>
+      <p class="coverage-desc">Our developments are precisely positioned in high-growth urban corridors to ensure maximum appreciation and connectivity.</p>
+      <ul class="locations-list">
+        @for (loc of locations; track loc.num) {
+          <li class="location-item">
+            <span class="loc-num">{{ loc.num }}</span>
+            <span class="loc-name">{{ loc.name }}</span>
+          </li>
+        }
+      </ul>
+    </div>
+    <div class="coverage-map">
+      <img [src]="mapImg" alt="Egypt Map" class="map-img" />
+      <div class="pin pin-cairo"><span class="pin-dot"></span><span class="pin-label">NEW CAIRO</span></div>
+      <div class="pin pin-capital"><span class="pin-dot"></span><span class="pin-label">NEW CAPITAL</span></div>
+      <div class="pin pin-coast"><span class="pin-dot"></span><span class="pin-label">NORTH COAST</span></div>
+    </div>
+  </div>
+</section>

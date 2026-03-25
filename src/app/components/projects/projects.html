@@ -1,0 +1,41 @@
+<section class="projects" id="projects">
+  <div class="projects-container">
+    <div class="projects-header">
+      <p class="section-label">PORTFOLIO</p>
+      <h2>Signature Projects</h2>
+    </div>
+    <div class="projects-carousel">
+      <div class="cards-track" [style.transform]="'translateX(-' + currentIndex * 472 + 'px)'">
+        @for (project of projects; track project.title) {
+          <article class="project-card">
+            <div class="card-img-wrap">
+              <img [src]="project.img" [alt]="project.title" />
+              <div class="card-img-gradient"></div>
+              <div class="card-img-info">
+                <span class="card-location">{{ project.location }}</span>
+                <h3>{{ project.title }}</h3>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>{{ project.desc }}</p>
+              <button class="download-btn">
+                <img [src]="downloadIcon" alt="" />
+                DOWNLOAD CATALOG
+              </button>
+            </div>
+          </article>
+        }
+      </div>
+    </div>
+    <div class="carousel-controls">
+      <div class="progress-bar">
+        <div class="progress-fill" [style.width]="((currentIndex + 1) / projects.length * 100) + '%'"></div>
+      </div>
+      <div class="dots">
+        @for (dot of dots; track dot) {
+          <button class="dot" [class.active]="dot === currentIndex" (click)="setIndex(dot)"></button>
+        }
+      </div>
+    </div>
+  </div>
+</section>

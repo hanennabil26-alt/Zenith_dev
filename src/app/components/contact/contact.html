@@ -1,0 +1,66 @@
+<section class="contact" id="contact">
+  <div class="contact-container">
+    <div class="contact-info">
+      <p class="section-label">Get In Touch</p>
+      <h2>Start a Conversation<br/><span class="muted">about Your<br/>Future</span><br/>Investment</h2>
+      <div class="contact-details">
+        <div class="detail-item">
+          <div class="detail-icon"><img [src]="addressIcon" alt="Address" /></div>
+          <div>
+            <p class="detail-title">Headquarters</p>
+            <p class="detail-text">Smouha Heights<br/>Fawzy Moaz St., Smouha, Alexandria, Egypt</p>
+          </div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-icon"><img [src]="phoneIcon" alt="Phone" /></div>
+          <div>
+            <p class="detail-title">Contact Numbers</p>
+            <p class="detail-text"><span class="label">LANDLINE</span> 034240805</p>
+            <p class="detail-text"><span class="label">MOBILE</span> +201099516553 | +201128242424</p>
+          </div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-icon"><img [src]="emailIcon" alt="Email" /></div>
+          <div>
+            <p class="detail-title">Direct Email</p>
+            <p class="detail-text">inquiries&#64;zenithdevelopments.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form-wrap">
+      <div class="form-gradient" [style.backgroundImage]="'url(' + gradientImg + ')'"></div>
+      <form (ngSubmit)="onSubmit()" class="contact-form">
+        <div class="form-row">
+          <div class="form-field">
+            <label>FULL NAME</label>
+            <input type="text" [(ngModel)]="form.name" name="name" placeholder="Enter your name" />
+          </div>
+          <div class="form-field">
+            <label>PHONE NUMBER</label>
+            <input type="tel" [(ngModel)]="form.phone" name="phone" placeholder="+20 --- --- -- --" />
+          </div>
+        </div>
+        <div class="form-field">
+          <label>SERVICE INTEREST</label>
+          <div class="select-wrap">
+            <select [(ngModel)]="form.service" name="service">
+              @for (s of services; track s) {
+                <option [value]="s">{{ s }}</option>
+              }
+            </select>
+            <img [src]="chevronIcon" alt="" class="chevron" />
+          </div>
+        </div>
+        <div class="form-field">
+          <label>MESSAGE</label>
+          <textarea [(ngModel)]="form.message" name="message" placeholder="How can we help you create your vision?" rows="5"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">
+          SEND INQUIRY
+          <img [src]="arrowIcon" alt="" />
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

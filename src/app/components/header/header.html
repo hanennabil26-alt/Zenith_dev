@@ -1,0 +1,16 @@
+<header class="header">
+  <nav class="nav">
+    <div class="logo">
+      <img src="loggo.svg" alt="Zenith Developments" class="logo-img" />
+    </div>
+    <div class="nav-links">
+      @for (link of navLinks; track link.label) {
+        <a class="nav-link" (click)="scrollTo(link.target)">{{ link.label }}</a>
+      }
+    </div>
+    <div class="nav-actions">
+      <button class="lang-btn">AR</button>
+      <button class="inquire-btn" (click)="scrollTo('contact')">INQUIRE NOW</button>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,21 @@
+<section class="services" id="services">
+  <div class="services-container">
+    <div class="services-header">
+      <p class="section-label">CAPABILITIES</p>
+      <h2>Our Integrated Services</h2>
+    </div>
+    <div class="services-grid">
+      @for (service of services; track service.title) {
+        <article class="service-card">
+          <span class="border-top"></span>
+          <span class="border-right"></span>
+          <span class="border-bottom"></span>
+          <span class="border-left"></span>
+          <div class="service-icon" [innerHTML]="service.safeIcon"></div>
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.text }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>

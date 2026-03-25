@@ -1,0 +1,29 @@
+<section class="leadership" id="leadership">
+  <div class="leadership-container">
+    <div class="leadership-header">
+      <p class="section-label">LEADERSHIP</p>
+      <h2>The Visionary Team</h2>
+    </div>
+    <div class="team-carousel">
+      <div class="team-track" [style.transform]="'translateX(-' + currentIndex * 427 + 'px)'">
+        @for (member of team; track member.name) {
+          <div class="team-member">
+            <div class="member-photo"></div>
+            <h3 class="member-name">{{ member.name }}</h3>
+            <p class="member-role">{{ member.role }}</p>
+          </div>
+        }
+      </div>
+    </div>
+    <div class="carousel-controls">
+      <div class="progress-bar">
+        <div class="progress-fill" [style.width]="((currentIndex + 1) / dots.length * 100) + '%'"></div>
+      </div>
+      <div class="dots">
+        @for (dot of dots; track dot) {
+          <button class="dot" [class.active]="dot === currentIndex" (click)="setIndex(dot)"></button>
+        }
+      </div>
+    </div>
+  </div>
+</section>
