@@ -1,3 +1,18 @@
 main {
   display: block;
 }
+/* كود سحري عشان الموقع يلم نفسه في الموبايل */
+@media screen and (max-width: 600px) {
+  * {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  .hero, .section, .container {
+    display: block !important;
+    padding: 15px !important;
+  }
+  img {
+    width: 100% !important;
+    height: auto !important;
+  }
+}

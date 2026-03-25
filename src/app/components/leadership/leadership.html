@@ -4,11 +4,17 @@
       <p class="section-label">LEADERSHIP</p>
       <h2>The Visionary Team</h2>
     </div>
-    <div class="team-carousel">
-      <div class="team-track" [style.transform]="'translateX(-' + currentIndex * 427 + 'px)'">
+    <div class="team-carousel"
+      (mousedown)="onDragStart($event)"
+      (touchstart)="onDragStart($event)">
+      <div class="team-track"
+        [style.transform]="trackTransform"
+        [class.dragging]="isDragging">
         @for (member of team; track member.name) {
           <div class="team-member">
-            <div class="member-photo"></div>
+            <div class="member-photo-wrap">
+              <div class="member-photo"></div>
+            </div>
             <h3 class="member-name">{{ member.name }}</h3>
             <p class="member-role">{{ member.role }}</p>
           </div>
