@@ -20,8 +20,6 @@ export class LeadershipComponent {
     { name: 'Sameh Shamakh', role: 'CFO' },
     { name: 'Mahmoud El-Nasharty', role: 'Sales Manager' },
     { name: 'Kareem Saadawy', role: 'Accountant' },
-    { name: 'Khaled Hassan', role: 'Construction Manager' },
-    { name: 'Mona Fahmy', role: 'Marketing Strategy' },
   ];
 
   get dots() { return [0, 1, 2]; }
