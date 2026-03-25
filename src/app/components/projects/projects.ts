@@ -26,7 +26,13 @@ export class ProjectsComponent {
 
   downloadIcon = downloadIcon;
 
-  get dots() { return this.projects.map((_, i) => i); }
+  get cardWidth(): number {
+    return window.innerWidth <= 768 ? window.innerWidth - 40 : 472;
+  }
+
+  get trackTransform(): string {
+    return `translateX(-${this.currentIndex * (this.cardWidth + (window.innerWidth <= 768 ? 20 : 48))}px)`;
+  }
 
   setIndex(i: number) { this.currentIndex = i; }
 

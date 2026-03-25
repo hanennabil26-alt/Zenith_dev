@@ -22,7 +22,8 @@ export class LeadershipComponent {
     { name: 'Kareem Saadawy', role: 'Accountant' },
   ];
 
-  get dots() { return [0, 1, 2, 3]; }
+  get dots() { return this.team.map((_, i) => i); }
+
   setIndex(i: number) { this.currentIndex = i; }
 
   get trackTransform(): string {
