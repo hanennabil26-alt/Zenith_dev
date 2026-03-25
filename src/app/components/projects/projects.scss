@@ -32,12 +32,16 @@
 
 .projects-carousel {
   overflow: hidden;
+  cursor: grab;
+  &:active { cursor: grabbing; }
 }
 
 .cards-track {
   display: flex;
   gap: 48px;
   transition: transform 0.4s ease;
+  user-select: none;
+  &.dragging { transition: none; }
 }
 
 .project-card {

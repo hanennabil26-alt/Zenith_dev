@@ -4,8 +4,15 @@
       <p class="section-label">PORTFOLIO</p>
       <h2>Signature Projects</h2>
     </div>
-    <div class="projects-carousel">
-      <div class="cards-track" [style.transform]="'translateX(-' + currentIndex * 472 + 'px)'">
+    <div class="projects-carousel"
+      (mousedown)="onDragStart($event)"
+      (mousemove)="onDragMove($event)"
+      (mouseup)="onDragEnd()"
+      (mouseleave)="onDragEnd()"
+      (touchstart)="onTouchStart($event)"
+      (touchmove)="onTouchMove($event)"
+      (touchend)="onDragEnd()">
+      <div class="cards-track" [class.dragging]="isDragging" [style.transform]="'translateX(-' + currentIndex * 472 + 'px)'"
         @for (project of projects; track project.title) {
           <article class="project-card">
             <div class="card-img-wrap">

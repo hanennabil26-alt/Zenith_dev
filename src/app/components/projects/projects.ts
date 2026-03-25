@@ -13,6 +13,9 @@ const downloadIcon = 'https://www.figma.com/api/mcp/asset/45804de6-6f9c-4b4b-8b0
 })
 export class ProjectsComponent {
   currentIndex = 0;
+  isDragging = false;
+  private dragStartX = 0;
+  private dragThreshold = 50;
 
   projects = [
     { location: 'NEW CAIRO', title: 'Tulip Al-Tagamoa', desc: 'A premium residential community redefining luxury living with sustainable smart-home integration and lush landscapes.', img: villaImg },
@@ -26,4 +29,33 @@ export class ProjectsComponent {
   get dots() { return this.projects.map((_, i) => i); }
 
   setIndex(i: number) { this.currentIndex = i; }
+
+  onDragStart(e: MouseEvent) {
+    this.isDragging = true;
+    this.dragStartX = e.clientX;
+  }
+
+  onDragMove(e: MouseEvent) {
+    if (!this.isDragging) return;
+    e.preventDefault();
+  }
+
+  onDragEnd(e?: MouseEvent) {
+    if (!this.isDragging) return;
+    const diff = this.dragStartX - (e?.clientX ?? this.dragStartX);
+    if (diff > this.dragThreshold && this.currentIndex < this.projects.length - 1) {
+      this.currentIndex++;
+    } else if (diff < -this.dragThreshold && this.currentIndex > 0) {
+      this.currentIndex--;
+    }
+    this.isDragging = false;
+  }
+
+  onTouchStart(e: TouchEvent) {
+    this.dragStartX = e.touches[0].clientX;
+  }
+
+  onTouchMove(e: TouchEvent) {
+    e.preventDefault();
+  }
 }
