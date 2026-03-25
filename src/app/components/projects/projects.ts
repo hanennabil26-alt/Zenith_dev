@@ -26,6 +26,10 @@ export class ProjectsComponent {
 
   downloadIcon = downloadIcon;
 
+  get isMobile(): boolean {
+    return window.innerWidth <= 768;
+  }
+
   get cardWidth(): number {
     return window.innerWidth <= 768 ? window.innerWidth - 40 : 472;
   }
@@ -58,14 +62,17 @@ export class ProjectsComponent {
   }
 
   onTouchStart(e: TouchEvent) {
+    if (this.isMobile) return;
     this.dragStartX = e.touches[0].clientX;
   }
 
   onTouchMove(e: TouchEvent) {
+    if (this.isMobile) return;
     e.preventDefault();
   }
 
   onTouchEnd(e: TouchEvent) {
+    if (this.isMobile) return;
     const diff = this.dragStartX - e.changedTouches[0].clientX;
     if (diff > this.dragThreshold && this.currentIndex < this.projects.length - 1) {
       this.currentIndex++;
