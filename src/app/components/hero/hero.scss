@@ -33,7 +33,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .hero-badge {
@@ -50,7 +50,6 @@
 }
 
 .hero-title {
-  text-align: left;
   h1 {
     font-size: clamp(60px, 8vw, 120px);
     font-weight: 900;
@@ -60,7 +59,7 @@
     margin: 0;
     text-transform: uppercase;
     &.muted {
-      color: rgba(255,255,255,0.3);
+      color: rgba(255,255,255,0.25);
       font-weight: 800;
     }
   }
@@ -73,17 +72,12 @@
   text-transform: uppercase;
   color: rgba(255,255,255,0.75);
   margin-top: 12px;
-  text-align: left;
-  width: 100%;
-  max-width: fit-content;
 }
 
 .hero-actions {
   display: flex;
   gap: 12px;
   margin-top: 20px;
-  align-self: flex-start;
-  margin-left: 0;
 }
 
 .btn-primary {

@@ -22,7 +22,7 @@ export class LeadershipComponent {
     { name: 'Kareem Saadawy', role: 'Accountant' },
   ];
 
-  get dots() { return [0, 1, 2]; }
+  get dots() { return [0, 1]; }
   setIndex(i: number) { this.currentIndex = i; }
 
   get trackTransform(): string {
