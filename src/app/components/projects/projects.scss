@@ -164,3 +164,76 @@
   transition: background 0.2s;
   &.active { background: var(--color-primary); }
 }
+
+// Mobile & Tablet Responsive
+@media (max-width: 1024px) {
+  .projects {
+    padding: 80px 40px;
+  }
+  .projects-container {
+    gap: 60px;
+  }
+  .projects-header h2 {
+    font-size: 48px;
+  }
+  .project-card {
+    flex: 0 0 360px;
+  }
+  .cards-track {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 60px 20px;
+  }
+  .projects-container {
+    gap: 48px;
+    padding: 0 16px;
+  }
+  .projects-header {
+    gap: 16px;
+    .section-label {
+      font-size: 14px;
+      letter-spacing: 6px;
+    }
+    h2 {
+      font-size: 32px;
+    }
+  }
+  .project-card {
+    flex: 0 0 calc(100vw - 64px);
+  }
+  .cards-track {
+    gap: 20px;
+  }
+  .card-img-wrap {
+    height: 240px;
+    .card-img-info {
+      bottom: 20px;
+      left: 20px;
+      gap: 6px;
+      .card-location {
+        font-size: 11px;
+      }
+      h3 {
+        font-size: 20px;
+      }
+    }
+  }
+  .card-body {
+    padding: 24px;
+    gap: 20px;
+    p {
+      font-size: 13px;
+    }
+  }
+  .download-btn {
+    font-size: 11px;
+    padding: 14px;
+  }
+  .progress-bar {
+    width: 180px;
+  }
+}

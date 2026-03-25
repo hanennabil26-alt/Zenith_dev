@@ -68,3 +68,36 @@
   transition: opacity 0.2s;
   &:hover { opacity: 0.85; }
 }
+
+// Mobile & Tablet Responsive
+@media (max-width: 1024px) {
+  .nav {
+    padding: 0 24px;
+  }
+  .nav-links {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 0 16px;
+    height: 56px;
+  }
+  .logo-img {
+    height: 28px;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-actions {
+    gap: 12px;
+  }
+  .lang-btn {
+    font-size: 11px;
+  }
+  .inquire-btn {
+    font-size: 11px;
+    padding: 8px 16px;
+  }
+}

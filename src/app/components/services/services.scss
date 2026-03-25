@@ -102,3 +102,48 @@ p {
   line-height: 1.625;
   color: var(--color-white-40);
 }
+
+// Mobile & Tablet Responsive
+@media (max-width: 1024px) {
+  .services {
+    padding: 80px 40px;
+  }
+  .services-container {
+    gap: 64px;
+  }
+  .services-header h2 {
+    font-size: 48px;
+  }
+  .service-card {
+    flex: 1 1 calc(33.333% - 16px);
+    min-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 60px 20px;
+  }
+  .services-container {
+    gap: 48px;
+    padding: 0 16px;
+  }
+  .services-header {
+    gap: 16px;
+    .section-label {
+      font-size: 14px;
+      letter-spacing: 6px;
+    }
+    h2 {
+      font-size: 32px;
+    }
+  }
+  .services-grid {
+    gap: 16px;
+  }
+  .service-card {
+    flex: 1 1 100%;
+    min-width: 100%;
+    padding: 32px 24px;
+  }
+}

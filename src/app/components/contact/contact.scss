@@ -177,3 +177,94 @@
   img { width: 20px; height: 20px; }
   &:hover { opacity: 0.85; }
 }
+
+// Mobile & Tablet Responsive
+@media (max-width: 1024px) {
+  .contact {
+    padding: 80px 40px;
+  }
+  .contact-container {
+    gap: 64px;
+    flex-direction: column;
+  }
+  .contact-info {
+    flex: 1;
+    h2 {
+      font-size: 48px;
+    }
+  }
+  .contact-form-wrap {
+    padding: 48px;
+  }
+  .form-row {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 60px 20px;
+  }
+  .contact-container {
+    gap: 48px;
+  }
+  .contact-info {
+    gap: 32px;
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 5px;
+    }
+    h2 {
+      font-size: 32px;
+      letter-spacing: -1px;
+    }
+  }
+  .contact-details {
+    gap: 32px;
+    padding-top: 24px;
+  }
+  .detail-item {
+    gap: 16px;
+  }
+  .detail-icon {
+    width: 40px;
+    height: 40px;
+    img {
+      width: 18px;
+      height: 18px;
+    }
+  }
+  .detail-title {
+    font-size: 9px;
+    letter-spacing: 2.5px;
+  }
+  .detail-text {
+    font-size: 14px;
+  }
+  .contact-form-wrap {
+    padding: 32px 24px;
+  }
+  .contact-form {
+    gap: 32px;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .form-field {
+    gap: 12px;
+    label {
+      font-size: 13px;
+      letter-spacing: 2.5px;
+    }
+    input, textarea, select {
+      font-size: 16px;
+      padding: 12px 0 16px;
+    }
+  }
+  .submit-btn {
+    font-size: 14px;
+    letter-spacing: 5px;
+    padding: 24px;
+  }
+}
