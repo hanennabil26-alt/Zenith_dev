@@ -194,9 +194,10 @@
   }
   .projects-container {
     gap: 48px;
-    padding: 0 16px;
+    padding: 0;
   }
   .projects-header {
+    padding: 0 20px;
     gap: 16px;
     .section-label {
       font-size: 14px;
@@ -206,11 +207,26 @@
       font-size: 32px;
     }
   }
-  .project-card {
-    flex: 0 0 calc(100vw - 40px);
+  .projects-carousel {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    &::-webkit-scrollbar { display: none; }
+    cursor: default;
   }
   .cards-track {
-    gap: 20px;
+    display: flex;
+    gap: 0;
+    width: max-content;
+    transition: none;
+    transform: none !important;
+  }
+  .project-card {
+    flex: 0 0 100vw;
+    scroll-snap-align: center;
+    padding: 0 20px;
+    box-sizing: border-box;
   }
   .card-img-wrap {
     height: 240px;
@@ -218,20 +234,14 @@
       bottom: 20px;
       left: 20px;
       gap: 6px;
-      .card-location {
-        font-size: 11px;
-      }
-      h3 {
-        font-size: 20px;
-      }
+      .card-location { font-size: 11px; }
+      h3 { font-size: 20px; }
     }
   }
   .card-body {
     padding: 24px;
     gap: 20px;
-    p {
-      font-size: 13px;
-    }
+    p { font-size: 13px; }
   }
   .download-btn {
     font-size: 11px;

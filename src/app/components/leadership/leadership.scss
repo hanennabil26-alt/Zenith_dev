@@ -166,14 +166,15 @@
 
 @media (max-width: 768px) {
   .leadership {
-    padding: 60px 20px;
+    padding: 60px 0;
     overflow-x: hidden;
   }
   .leadership-container {
     gap: 48px;
-    padding: 0 16px;
+    padding: 0;
   }
   .leadership-header {
+    padding: 0 20px;
     gap: 16px;
     .section-label {
       font-size: 14px;
@@ -184,13 +185,23 @@
     }
   }
   .team-carousel {
-    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    cursor: default;
+    &::-webkit-scrollbar { display: none; }
   }
   .team-track {
-    width: 100%;
+    display: flex;
+    gap: 0;
+    width: max-content;
+    transition: none;
+    transform: none !important;
   }
   .team-member {
     flex: 0 0 100vw;
+    scroll-snap-align: center;
     padding: 0 20px 40px;
     align-items: center;
   }
