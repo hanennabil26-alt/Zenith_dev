@@ -20,13 +20,15 @@
 }
 
 .logo {
-  display: flex;
-  align-items: center;
+  display: block;
+  width: auto;
+  max-width: none;
 }
 
 .logo-img {
-  height: 34px !important;
   width: 154px !important;
+  height: auto !important;
+  max-width: none !important;
   display: block;
 }
 
@@ -84,7 +86,8 @@
     height: 56px;
   }
   .logo-img {
-    height: 28px;
+    width: 120px !important;
+    height: auto !important;
   }
   .nav-links {
     display: none;
