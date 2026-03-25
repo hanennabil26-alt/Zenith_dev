@@ -66,7 +66,7 @@
 
 .card-img-wrap {
   position: relative;
-  height: 320px;
+  height: 240px;
   overflow: hidden;
   img {
     width: 100%;
@@ -103,16 +103,16 @@
 }
 
 .card-body {
-  padding: 32px;
+  padding: 20px 24px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
   flex: 1;
   justify-content: space-between;
   p {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 400;
-    line-height: 1.625;
+    line-height: 1.6;
     color: var(--color-white-40);
   }
 }
@@ -170,7 +170,7 @@
   &.active { background: var(--color-primary); }
 }
 
-// Mobile & Tablet Responsive
+// Tablet
 @media (max-width: 1024px) {
   .projects {
     padding: 80px 40px;
@@ -181,17 +181,12 @@
   .projects-header h2 {
     font-size: 48px;
   }
-  .project-card {
-    flex: 0 0 360px;
-  }
-  .cards-track {
-    gap: 32px;
-  }
 }
 
+// Mobile
 @media (max-width: 768px) {
   .projects {
-    padding: 60px 20px;
+    padding: 60px 0;
   }
   .projects-container {
     gap: 48px;
@@ -209,28 +204,24 @@
     }
   }
   .projects-carousel {
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    &::-webkit-scrollbar { display: none; }
+    overflow: hidden;
     cursor: default;
-  }
-  .cards-track {
-    display: flex;
-    gap: 0;
-    width: max-content;
-    transition: none;
-    transform: none !important;
-  }
-  .project-card {
-    flex: 0 0 100vw;
-    scroll-snap-align: center;
     padding: 0 20px;
     box-sizing: border-box;
   }
+  .cards-track {
+    display: flex;
+    gap: 16px;
+    transition: transform 0.4s ease;
+    &.dragging { transition: none; }
+  }
+  .project-card {
+    flex: 0 0 calc(100vw - 40px);
+    scroll-snap-align: center;
+    box-sizing: border-box;
+  }
   .card-img-wrap {
-    height: 240px;
+    height: 200px;
     .card-img-info {
       bottom: 20px;
       left: 20px;
@@ -240,8 +231,8 @@
     }
   }
   .card-body {
-    padding: 24px;
-    gap: 20px;
+    padding: 20px;
+    gap: 16px;
     p { font-size: 13px; }
   }
   .download-btn {

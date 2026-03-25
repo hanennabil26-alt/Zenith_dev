@@ -12,7 +12,7 @@
       (touchstart)="onTouchStart($event)"
       (touchmove)="onTouchMove($event)"
       (touchend)="onTouchEnd($event)">
-      <div class="cards-track" [class.dragging]="isDragging" [style.transform]="isMobile ? 'none' : trackTransform">>
+      <div class="cards-track" [class.dragging]="isDragging" [style.transform]="trackTransform">
         @for (project of projects; track project.title) {
           <article class="project-card">
             <div class="card-img-wrap">

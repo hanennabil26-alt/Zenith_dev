@@ -37,7 +37,6 @@ export class ProjectsComponent {
   }
 
   get trackTransform(): string {
-    if (this.isMobile) return 'none';
     return `translateX(-${this.currentIndex * (this.cardWidth + 16)}px)`;
   }
 
@@ -65,17 +64,14 @@ export class ProjectsComponent {
   }
 
   onTouchStart(e: TouchEvent) {
-    if (this.isMobile) return;
     this.dragStartX = e.touches[0].clientX;
   }
 
   onTouchMove(e: TouchEvent) {
-    if (this.isMobile) return;
     e.preventDefault();
   }
 
   onTouchEnd(e: TouchEvent) {
-    if (this.isMobile) return;
     const diff = this.dragStartX - e.changedTouches[0].clientX;
     if (diff > this.dragThreshold && this.currentIndex < this.projects.length - 1) {
       this.currentIndex++;
