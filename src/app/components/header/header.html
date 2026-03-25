@@ -11,6 +11,17 @@
     <div class="nav-actions">
       <button class="lang-btn">AR</button>
       <button class="inquire-btn" (click)="scrollTo('contact')">INQUIRE NOW</button>
+      <button class="hamburger-btn" (click)="toggleMenu()" [class.open]="menuOpen" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </nav>
+
+  <div class="mobile-menu" [class.open]="menuOpen">
+    @for (link of navLinks; track link.label) {
+      <a class="mobile-nav-link" (click)="scrollTo(link.target)">{{ link.label }}</a>
+    }
+  </div>
 </header>
