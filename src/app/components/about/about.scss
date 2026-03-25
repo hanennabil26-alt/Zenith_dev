@@ -127,3 +127,51 @@
     color: var(--color-white-40);
   }
 }
+
+// Mobile & Tablet Responsive
+@media (max-width: 1024px) {
+  .about {
+    padding: 80px 40px;
+  }
+  .about-container {
+    gap: 60px;
+  }
+  .about-heading {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 20px;
+    overflow-x: hidden;
+  }
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .about-image-col {
+    .about-badge {
+      bottom: -20px;
+      right: 0;
+      width: 200px;
+      padding: 24px;
+      .badge-number {
+        font-size: 28px;
+      }
+      .badge-text {
+        font-size: 11px;
+      }
+    }
+  }
+  .section-label {
+    font-size: 14px;
+    letter-spacing: 6px;
+  }
+  .about-heading {
+    font-size: 32px;
+  }
+  .about-text p {
+    font-size: 15px;
+  }
+}

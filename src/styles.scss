@@ -27,6 +27,8 @@ html, body {
   color: var(--color-white);
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 img { display: block; max-width: 100%; }

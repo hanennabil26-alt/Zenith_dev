@@ -110,3 +110,54 @@
   transition: background 0.2s;
   &.active { background: var(--color-primary); }
 }
+
+// Mobile & Tablet Responsive
+@media (max-width: 1024px) {
+  .leadership {
+    padding: 80px 40px;
+  }
+  .leadership-container {
+    gap: 64px;
+  }
+  .leadership-header h2 {
+    font-size: 48px;
+  }
+  .team-member {
+    flex: 0 0 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .leadership {
+    padding: 60px 20px;
+    overflow-x: hidden;
+  }
+  .leadership-container {
+    gap: 48px;
+    padding: 0 16px;
+  }
+  .leadership-header {
+    gap: 16px;
+    .section-label {
+      font-size: 14px;
+      letter-spacing: 6px;
+    }
+    h2 {
+      font-size: 32px;
+    }
+  }
+  .team-member {
+    flex: 0 0 calc(100vw - 40px);
+    padding-bottom: 40px;
+  }
+  .member-photo {
+    width: 180px;
+    height: 180px;
+  }
+  .member-name {
+    font-size: 18px;
+  }
+  .progress-bar {
+    width: 180px;
+  }
+}

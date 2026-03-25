@@ -104,3 +104,50 @@
 .pin-cairo { top: 25%; left: 36%; }
 .pin-capital { top: 35%; left: 33%; }
 .pin-coast { top: 15%; right: 44%; }
+
+// Mobile & Tablet Responsive
+@media (max-width: 1024px) {
+  .coverage {
+    padding: 80px 40px;
+  }
+  .coverage-container {
+    gap: 48px;
+  }
+  .coverage-info h2 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .coverage {
+    padding: 60px 20px;
+    overflow-x: hidden;
+  }
+  .coverage-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .coverage-info {
+    gap: 16px;
+    .section-label {
+      font-size: 14px;
+      letter-spacing: 6px;
+    }
+    h2 {
+      font-size: 32px;
+    }
+    .coverage-desc {
+      font-size: 15px;
+    }
+  }
+  .coverage-map {
+    height: 300px;
+    padding: 20px;
+  }
+  .location-item {
+    gap: 16px;
+    .loc-name {
+      font-size: 16px;
+    }
+  }
+}

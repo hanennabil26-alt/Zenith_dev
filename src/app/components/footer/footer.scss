@@ -100,3 +100,43 @@
     &:hover { color: var(--color-white-40); }
   }
 }
+
+// Mobile & Tablet Responsive
+@media (max-width: 1024px) {
+  .footer {
+    padding: 60px 40px;
+  }
+  .footer-links {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 48px 20px;
+    overflow-x: hidden;
+  }
+  .footer-container {
+    gap: 48px;
+    padding: 0 16px;
+  }
+  .footer-top {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .footer-brand {
+    max-width: 100%;
+  }
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+  .footer-legal {
+    gap: 20px;
+  }
+}
